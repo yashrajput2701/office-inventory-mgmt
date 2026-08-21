@@ -18,11 +18,13 @@ export default function Layout() {
           {user?.role === 'CREATOR' && <Link to="/orders/new">+ New Request</Link>}
           <Link to="/change-password">Change Password</Link>
         </nav>
+        
         <div className="user-info">
           <span>{user?.fullName} <em>({user?.role})</em></span>
           <button onClick={handleLogout}>Logout</button>
         </div>
       </header>
+
       <main className="content">
         <Outlet />
       </main>
